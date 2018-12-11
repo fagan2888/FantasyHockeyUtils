@@ -1,0 +1,86 @@
+[
+  {
+    "model": "Scraper.FantasyTeam",
+    "fields": {
+      "name": "Bar Down Syndrome",
+      "team_id": 1
+    }
+  },
+  {
+    "model": "Scraper.FantasyTeam",
+    "fields": {
+      "name": "Do As I Seguin, Not As I Drouin",
+      "team_id": 2
+    }
+  },
+  {
+    "model": "Scraper.FantasyTeam",
+    "fields": {
+      "name": "Toronto Maple Queefs",
+      "team_id": 3
+    }
+  },
+  {
+    "model": "Scraper.FantasyTeam",
+    "fields": {
+      "name": "Peanut Butter",
+      "team_id": 4
+    }
+  },
+  {
+    "model": "Scraper.FantasyTeam",
+    "fields": {
+      "name": "Just a Schmidt",
+      "team_id": 5
+    }
+  },
+  {
+    "model": "Scraper.FantasyTeam",
+    "fields": {
+      "name": "Hardest Hutton to Hutton",
+      "team_id": 6
+    }
+  },
+  {
+    "model": "Scraper.FantasyTeam",
+    "fields": {
+      "name": "Its Mayday Bitches",
+      "team_id": 7
+    }
+  },
+  {
+    "model": "Scraper.FantasyTeam",
+    "fields": {
+      "name": "Don't Believe the Snype",
+      "team_id": 8
+    }
+  },
+  {
+    "model": "Scraper.FantasyTeam",
+    "fields": {
+      "name": "Moose Knuckles",
+      "team_id": 9
+    }
+  },
+  {
+    "model": "Scraper.FantasyTeam",
+    "fields": {
+      "name": "2 Sedins No Cup",
+      "team_id": 10
+    }
+  },
+  {
+    "model": "Scraper.FantasyTeam",
+    "fields": {
+      "name": "The Flow",
+      "team_id": 11
+    }
+  },
+  {
+    "model": "Scraper.FantasyTeam",
+    "fields": {
+      "name": "Burnaby Heights Mannimal",
+      "team_id": 12
+    }
+  }
+]

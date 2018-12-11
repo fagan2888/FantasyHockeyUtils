@@ -1,0 +1,44 @@
+[
+  {
+    "model": "Scraper.Position",
+    "fields": {
+      "name": "Center",
+      "espn_position_id": 0
+    }
+  },
+  {
+    "model": "Scraper.Position",
+    "fields": {
+      "name": "Left Wing",
+      "espn_position_id": 1
+    }
+  },
+  {
+    "model": "Scraper.Position",
+    "fields": {
+      "name": "Right Wing",
+      "espn_position_id": 2
+    }
+  },
+  {
+    "model": "Scraper.Position",
+    "fields": {
+      "name": "Defense",
+      "espn_position_id": 4
+    }
+  },
+  {
+    "model": "Scraper.Position",
+    "fields": {
+      "name": "Utility",
+      "espn_position_id": 6
+    }
+  },
+  {
+    "model": "Scraper.Position",
+    "fields": {
+      "name": "Goalie",
+      "espn_position_id": 5
+    }
+  }
+]

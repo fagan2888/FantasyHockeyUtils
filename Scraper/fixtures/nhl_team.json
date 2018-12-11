@@ -1,0 +1,250 @@
+[
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 25,
+      "long_name": "Anaheim",
+      "short_name": "Ana"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 24,
+      "long_name": "Arizona",
+      "short_name": "Ari"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 1,
+      "long_name": "Boston",
+      "short_name": "Bos"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 2,
+      "long_name": "Buffalo",
+      "short_name": "Buf"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 3,
+      "long_name": "Calgary",
+      "short_name": "Cgy"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 7,
+      "long_name": "Carolina",
+      "short_name": "Car"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 4,
+      "long_name": "Chicago",
+      "short_name": "Chi"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 29,
+      "long_name": "Columbus",
+      "short_name": "Cls"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 17,
+      "long_name": "Colorado",
+      "short_name": "Col"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 9,
+      "long_name": "Dallas",
+      "short_name": "Dal"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 5,
+      "long_name": "Detroit",
+      "short_name": "Det"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 6,
+      "long_name": "Edmonton",
+      "short_name": "Edm"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 26,
+      "long_name": "Florida",
+      "short_name": "Fla"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 8,
+      "long_name": "Los Angeles",
+      "short_name": "LA"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 30,
+      "long_name": "Minnesota",
+      "short_name": "Min"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 10,
+      "long_name": "Montreal",
+      "short_name": "Mon"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 11,
+      "long_name": "New Jersey",
+      "short_name": "NJ"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 27,
+      "long_name": "Nashville",
+      "short_name": "Nsh"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 12,
+      "long_name": "NY Islanders",
+      "short_name": "NYI"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 13,
+      "long_name": "NY Rangers",
+      "short_name": "NYR"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 14,
+      "long_name": "Ottawa",
+      "short_name": "Ott"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 15,
+      "long_name": "Philadelphia",
+      "short_name": "Phi"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 16,
+      "long_name": "Pittsburgh",
+      "short_name": "Pit"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 18,
+      "long_name": "San Jose",
+      "short_name": "SJ"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 19,
+      "long_name": "St. Louis",
+      "short_name": "StL"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 20,
+      "long_name": "Tampa Bay",
+      "short_name": "TB"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 21,
+      "long_name": "Toronto",
+      "short_name": "Tor"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 22,
+      "long_name": "Vancouver",
+      "short_name": "Van"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 37,
+      "long_name": "Vegas",
+      "short_name": "Vgs"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 28,
+      "long_name": "Winnipeg",
+      "short_name": "Wpg"
+    }
+  },
+  {
+    "model": "Scraper.NHLTeam",
+    "fields": {
+      "espn_team_id": 23,
+      "long_name": "Washington",
+      "short_name": "Wsh"
+    }
+  }
+]
