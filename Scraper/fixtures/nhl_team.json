@@ -123,7 +123,7 @@
     "model": "Scraper.NHLTeam",
     "fields": {
       "espn_team_id": 10,
-      "long_name": "Montreal",
+      "long_name": "Montréal",
       "short_name": "Mon"
     }
   },
@@ -195,7 +195,7 @@
     "model": "Scraper.NHLTeam",
     "fields": {
       "espn_team_id": 19,
-      "long_name": "St. Louis",
+      "long_name": "St Louis",
       "short_name": "StL"
     }
   },

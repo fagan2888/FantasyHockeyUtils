@@ -13,8 +13,15 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 import os
 
 # Custom Settings
+ALLOWANCES_URL = \
+    "http://fantasy.espn.com/apis/v3/games/FHL/seasons/2019/segments/0/leagues/21928?" \
+    "leagueId=21928&view=cinco_livescoringInit"
 CLUBHOUSE_URL = \
     'http://fantasy.espn.com/apis/v3/games/fhl/seasons/2019/segments/0/leagues/21928?forTeamId={team_id}&view=mRoster'
+STANDINGS_URL = \
+    'https://statsapi.web.nhl.com/api/v1/standings?hydrate=record(overall),division,conference,' \
+    'team(nextSchedule(team),previousSchedule(team))&season=20182019'
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
