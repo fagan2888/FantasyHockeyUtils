@@ -3,7 +3,14 @@
 {% include "Core/head.html" %}
 <body>
   <div class="frame">
-
+  {% for team in teams %}
+    <a class="team_name_{{ team.1 }} button" href='/clubhouse/view_team/{{ team.0.team_id }}'>
+      {{ team.0.name }}
+    </a>
+    <div class="team_gp_{{ team.1 }}">
+      {{ team.0.total_games_played }}
+    </div>
+  {% endfor %}
   </div>
 </body>
 </html>

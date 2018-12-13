@@ -13,7 +13,7 @@ def get_all_fantasy_teams(request):
     scrape_fantasy_teams_if_necessary()
     all_teams = sorted(list(FantasyTeam.objects.all()), key=lambda x: x.total_games_played, reverse=True)
 
-    context = {"teams": [(team.name, team.total_games_played) for team in all_teams]}
+    context = {"teams": [(team, i) for i, team in enumerate(all_teams)]}
     template = loader.get_template('TeamList/TeamList.html')
 
     return HttpResponse(template.render(context, request))
