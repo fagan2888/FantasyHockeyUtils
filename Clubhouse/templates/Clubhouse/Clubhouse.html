@@ -1,0 +1,17 @@
+<html>
+  {% include "Core/head.html" %}
+  {% load static %}
+  <link href="{% static 'TeamList/assets/css/Clubhouse.css' %}" rel="stylesheet" type="text/css">
+  <body>
+    <div class="frame ClubhouseFrame">
+    {% for player in players %}
+      <a class="player_name_{{ player.1 }}"}'>
+        {{ player.0.name }}
+      </a>
+      <div class="team_gp_{{ team.1 }}">
+        {{ team.0.total_games_played }}
+      </div>
+    {% endfor %}
+    </div>
+  </body>
+</html>

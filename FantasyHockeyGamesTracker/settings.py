@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'Clubhouse.apps.ClubhouseConfig',
     'Scraper.apps.ScraperConfig',
     'TeamList.apps.TeamListConfig',
     'core.apps.CoreConfig',

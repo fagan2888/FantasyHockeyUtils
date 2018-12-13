@@ -9,7 +9,7 @@ def scrape_fantasy_teams_if_necessary():
 
 
 @require_http_methods(["GET"])
-def get_all_fantasy_teams(request):
+def view_fantasy_teams(request):
     scrape_fantasy_teams_if_necessary()
     all_teams = sorted(list(FantasyTeam.objects.all()), key=lambda x: x.total_games_played, reverse=True)
 
