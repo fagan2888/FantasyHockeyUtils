@@ -11,69 +11,69 @@
         Roster
       </div>
       {% for player in centers %}
-        <div class="player_name_{{ player.1 }}">
-          {{ player.0.name }}
+        <div class="player_name_{{ player.index }}">
+          {{ player.name }}
         </div>
-        <div class="player_position_{{ player.1 }}">
-          {{ player.0.current_position.name }}
+        <div class="player_position_{{ player.index }}">
+          {{ player.position }}
         </div>
-        <div class="player_nhl_team_{{ player.1 }}">
-          {{ player.0.nhl_team.short_name }}
+        <div class="player_nhl_team_{{ player.index }}">
+          {{ player.nhl_team }}
         </div>
       {% endfor %}
       {% for player in left_wings %}
-        <div class="player_name_{{ player.1 }}">
-          {{ player.0.name }}
+        <div class="player_name_{{ player.index }}">
+          {{ player.name }}
         </div>
-        <div class="player_position_{{ player.1 }}">
-          {{ player.0.current_position.name }}
+        <div class="player_position_{{ player.index }}">
+          {{ player.position }}
         </div>
-        <div class="player_nhl_team_{{ player.1 }}">
-          {{ player.0.nhl_team.short_name }}
+        <div class="player_nhl_team_{{ player.index }}">
+          {{ player.nhl_team }}
         </div>
       {% endfor %}
       {% for player in right_wings %}
-        <div class="player_name_{{ player.1 }}">
-          {{ player.0.name }}
+        <div class="player_name_{{ player.index }}">
+          {{ player.name }}
         </div>
-        <div class="player_position_{{ player.1 }}">
-          {{ player.0.current_position.name }}
+        <div class="player_position_{{ player.index }}">
+          {{ player.position }}
         </div>
-        <div class="player_nhl_team_{{ player.1 }}">
-          {{ player.0.nhl_team.short_name }}
+        <div class="player_nhl_team_{{ player.index }}">
+          {{ player.nhl_team }}
         </div>
       {% endfor %}
       {% for player in defense %}
-        <div class="player_name_{{ player.1 }}">
-          {{ player.0.name }}
+        <div class="player_name_{{ player.index }}">
+          {{ player.name }}
         </div>
-        <div class="player_position_{{ player.1 }}">
-          {{ player.0.current_position.name }}
+        <div class="player_position_{{ player.index }}">
+          {{ player.position }}
         </div>
-        <div class="player_nhl_team_{{ player.1 }}">
-          {{ player.0.nhl_team.short_name }}
+        <div class="player_nhl_team_{{ player.index }}">
+          {{ player.nhl_team }}
         </div>
       {% endfor %}
       {% for player in utilities %}
-        <div class="player_name_{{ player.1 }}">
-          {{ player.0.name }}
+        <div class="player_name_{{ player.index }}">
+          {{ player.name }}
         </div>
-        <div class="player_position_{{ player.1 }}">
-          {{ player.0.current_position.name }}
+        <div class="player_position_{{ player.index }}">
+          {{ player.position }}
         </div>
-        <div class="player_nhl_team_{{ player.1 }}">
-          {{ player.0.nhl_team.short_name }}
+        <div class="player_nhl_team_{{ player.index }}">
+          {{ player.nhl_team }}
         </div>
       {% endfor %}
       {% for player in goalies %}
-        <div class="player_name_{{ player.1 }}">
-          {{ player.0.name }}
+        <div class="player_name_{{ player.index }}">
+          {{ player.name }}
         </div>
-        <div class="player_position_{{ player.1 }}">
-          {{ player.0.current_position.name }}
+        <div class="player_position_{{ player.index }}">
+          {{ player.position }}
         </div>
-        <div class="player_nhl_team_{{ player.1 }}">
-          {{ player.0.nhl_team.short_name }}
+        <div class="player_nhl_team_{{ player.index }}">
+          {{ player.nhl_team }}
         </div>
       {% endfor %}
     </div>
@@ -120,3 +120,22 @@
     </div>
   </body>
 </html>
+
+<script>
+  $(document).ready(function() {
+    setInterval("refreshTeam()", 3000);
+  });
+
+  function refreshTeam() {
+    $.ajax({
+     type: "GET",
+     url: "/clubhouse/refresh_team/{{ team_id }}",
+     success: function(response) {
+         let seenNewData = false;
+         for (let i = 0; i < 3; i++) {
+             
+         }
+     }
+   });
+  }
+</script>

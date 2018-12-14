@@ -1,17 +1,20 @@
 from django.conf import settings
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.template import loader
 from django.views.decorators.http import require_http_methods
 from Scraper.models import FantasyTeam, NHLTeam, Player
 from Scraper.views import scrape_fantasy_teams_if_necessary, scrape_nhl_teams_if_necessary, scrape_players_for_team
 
 
-@require_http_methods(["GET"])
-def view_team(request, team_id):
-    scrape_players_for_team(request, team_id)
-    scrape_fantasy_teams_if_necessary(request)
-    scrape_nhl_teams_if_necessary(request)
+class PlayerView:
+    def __init__(self, name, position, nhl_team, index):
+        self.name = name
+        self.position = position
+        self.nhl_team = nhl_team
+        self.index = index
 
+
+def get_team_context(team_id):
     team = FantasyTeam.objects.get(team_id=team_id)
     players_on_team = list(Player.objects.filter(fantasy_team__name=team.name).order_by('name'))
 
@@ -43,13 +46,20 @@ def view_team(request, team_id):
         [nhl_team_dict[goalie.nhl_team.espn_team_id] for goalie in goalies]
     ) * 0.75)) + team.games_played_goalie - settings.MAX_GP_GOALIE
 
-    context = {
-        "centers": [(player, i) for i, player in enumerate(centers)],
-        "left_wings": [(player, i + 3) for i, player in enumerate(left_wings)],
-        "right_wings": [(player, i + 6) for i, player in enumerate(right_wings)],
-        "defense": [(player, i + 9) for i, player in enumerate(defense)],
-        "utilities": [(player, i + 14) for i, player in enumerate(utilities)],
-        "goalies": [(player, i + 15) for i, player in enumerate(goalies)],
+    return {
+        "centers": [PlayerView(player.name, player.current_position.name, player.nhl_team.short_name, i).__dict__
+                    for i, player in enumerate(centers)],
+        "left_wings": [PlayerView(player.name, player.current_position.name, player.nhl_team.short_name, i + 3).__dict__
+                       for i, player in enumerate(left_wings)],
+        "right_wings":
+            [PlayerView(player.name, player.current_position.name, player.nhl_team.short_name, i + 6).__dict__
+                for i, player in enumerate(right_wings)],
+        "defense": [PlayerView(player.name, player.current_position.name, player.nhl_team.short_name, i + 9).__dict__
+                    for i, player in enumerate(defense)],
+        "utilities": [PlayerView(player.name, player.current_position.name, player.nhl_team.short_name, i + 14).__dict__
+                      for i, player in enumerate(utilities)],
+        "goalies": [PlayerView(player.name, player.current_position.name, player.nhl_team.short_name, i + 15).__dict__
+                    for i, player in enumerate(goalies)],
         "center_gp": center_gp,
         "left_wing_gp": left_wing_gp,
         "right_wing_gp": right_wing_gp,
@@ -57,7 +67,29 @@ def view_team(request, team_id):
         "utility_gp": utility_gp,
         "goalie_gp": goalie_gp,
         "team_name": team.name,
+        "team_id": team_id,
     }
+
+
+@require_http_methods(["GET"])
+def view_team(request, team_id):
+    scrape_players_for_team(request, team_id)
+    scrape_fantasy_teams_if_necessary(request)
+    scrape_nhl_teams_if_necessary(request)
+
+    context = get_team_context(team_id)
+
     template = loader.get_template('Clubhouse/Clubhouse.html')
 
     return HttpResponse(template.render(context, request))
+
+
+@require_http_methods(["GET"])
+def get_team_refresh(request, team_id):
+    scrape_players_for_team(request, team_id)
+    scrape_fantasy_teams_if_necessary(request)
+    scrape_nhl_teams_if_necessary(request)
+
+    context = get_team_context(team_id)
+
+    return JsonResponse(context)

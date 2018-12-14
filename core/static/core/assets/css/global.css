@@ -7,7 +7,7 @@ html {
 body {
     align-items: center;
     display: grid;
-    grid-template-columns: 1fr minmax(30px, 10%) minmax(30px, 10%) minmax(30px, 10%) minmax(30px, 10%) minmax(30px, 10%) minmax(30px, 10%) 1fr;
+    grid-template-columns: 1fr minmax(250px, 10%) minmax(125px, 10%) minmax(125px, 10%) minmax(125px, 10%) minmax(125px, 10%) minmax(125px, 10%) 1fr;
     grid-template-rows: 1fr minmax(600px, 84%) 1fr;
     justify-items: stretch;
     height: 100%;
