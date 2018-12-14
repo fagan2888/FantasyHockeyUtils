@@ -1,4 +1,6 @@
 .TeamListFrame {
+    grid-column-start: 2;
+    grid-column-end: 8;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(12, 8.33333%);
 }

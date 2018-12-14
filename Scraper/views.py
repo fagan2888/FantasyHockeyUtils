@@ -1,11 +1,17 @@
 from django.conf import settings
 from django.http import HttpResponse
-from django.views.decorators.http import require_http_methods
 from Scraper.models import FantasyTeam, NHLTeam, Player, Position
 import requests
 
 
-@require_http_methods(["GET"])
+def scrape_fantasy_teams_if_necessary(request):
+    pass
+
+
+def scrape_nhl_teams_if_necessary(request):
+    pass
+
+
 def scrape_games_played_for_fantasy_teams(request):
     def get_teams_from_espn_response(json):
         team_array = json["schedule"][0]["teams"]
@@ -32,7 +38,6 @@ def scrape_games_played_for_fantasy_teams(request):
     return HttpResponse(status=200)
 
 
-@require_http_methods(["GET"])
 def scrape_games_played_for_nhl_teams(request):
     def get_teams_from_nhl_response(json):
         def get_teams_from_division(division_json):
@@ -68,7 +73,6 @@ def scrape_games_played_for_nhl_teams(request):
     return HttpResponse(status=200)
 
 
-@require_http_methods(["GET"])
 def scrape_players_for_team(request, team_id):
     def get_players_from_espn_response(json):
         def get_player_from_espn_blob(blob):

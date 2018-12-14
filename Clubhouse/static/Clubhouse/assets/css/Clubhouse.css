@@ -1,0 +1,484 @@
+.ClubhouseFrame {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(19, 5.2631%);
+    font-size: 85%;
+}
+
+.GPFrame {
+    grid-column-start: 6;
+    grid-column-end: 8;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(19, 5.2631%);
+    font-size: 85%;
+}
+
+.team_name {
+    color: lightpink;
+    text-shadow: 1px 0 0 #666, 0 -1px 0 #666, 0 1px 0 #666, -1px 0 0 #666;
+    font-weight: bolder;
+    font-size: 120%;
+    place-self: center;
+    grid-column-start: 2;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.frame_title {
+    font-weight: bolder;
+    font-size: 120%;
+    place-self: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.player_name_0 {
+    place-self: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.player_name_1 {
+    place-self: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.player_name_2 {
+    place-self: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+.player_name_3 {
+    place-self: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+.player_name_4 {
+    place-self: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+.player_name_5 {
+    place-self: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 7;
+    grid-row-end: 8;
+}
+.player_name_6 {
+    place-self: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 8;
+    grid-row-end: 9;
+}
+.player_name_7 {
+    place-self: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 9;
+    grid-row-end: 10;
+}
+.player_name_8 {
+    place-self: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 10;
+    grid-row-end: 11;
+}
+.player_name_9 {
+    place-self: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 11;
+    grid-row-end: 12;
+}
+.player_name_10 {
+    place-self: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 12;
+    grid-row-end: 13;
+}
+.player_name_11 {
+    place-self: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 13;
+    grid-row-end: 14;
+}
+.player_name_12 {
+    place-self: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 14;
+    grid-row-end: 15;
+}
+.player_name_13 {
+    place-self: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 15;
+    grid-row-end: 16;
+}
+.player_name_14 {
+    place-self: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 16;
+    grid-row-end: 17;
+}
+.player_name_15 {
+    place-self: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 17;
+    grid-row-end: 18;
+}
+.player_name_16 {
+    place-self: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 18;
+    grid-row-end: 19;
+}
+
+.player_position_0 {
+    place-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.player_position_1 {
+    place-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.player_position_2 {
+    place-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+.player_position_3 {
+    place-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+.player_position_4 {
+    place-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+.player_position_5 {
+    place-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 7;
+    grid-row-end: 8;
+}
+.player_position_6 {
+    place-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 8;
+    grid-row-end: 9;
+}
+.player_position_7 {
+    place-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 9;
+    grid-row-end: 10;
+}
+.player_position_8 {
+    place-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 10;
+    grid-row-end: 11;
+}
+.player_position_9 {
+    place-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 11;
+    grid-row-end: 12;
+}
+.player_position_10 {
+    place-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 12;
+    grid-row-end: 13;
+}
+.player_position_11 {
+    place-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 13;
+    grid-row-end: 14;
+}
+.player_position_12 {
+    place-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 14;
+    grid-row-end: 15;
+}
+.player_position_13 {
+    place-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 15;
+    grid-row-end: 16;
+}
+.player_position_14 {
+    place-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 16;
+    grid-row-end: 17;
+}
+.player_position_15 {
+    place-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 17;
+    grid-row-end: 18;
+}
+.player_position_16 {
+    place-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 18;
+    grid-row-end: 19;
+}
+
+.player_nhl_team_0 {
+    place-self: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.player_nhl_team_1 {
+    place-self: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.player_nhl_team_2 {
+    place-self: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+.player_nhl_team_3 {
+    place-self: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+.player_nhl_team_4 {
+    place-self: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+.player_nhl_team_5 {
+    place-self: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 7;
+    grid-row-end: 8;
+}
+.player_nhl_team_6 {
+    place-self: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 8;
+    grid-row-end: 9;
+}
+.player_nhl_team_7 {
+    place-self: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 9;
+    grid-row-end: 10;
+}
+.player_nhl_team_8 {
+    place-self: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 10;
+    grid-row-end: 11;
+}
+.player_nhl_team_9 {
+    place-self: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 11;
+    grid-row-end: 12;
+}
+.player_nhl_team_10 {
+    place-self: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 12;
+    grid-row-end: 13;
+}
+.player_nhl_team_11 {
+    place-self: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 13;
+    grid-row-end: 14;
+}
+.player_nhl_team_12 {
+    place-self: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 14;
+    grid-row-end: 15;
+}
+.player_nhl_team_13 {
+    place-self: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 15;
+    grid-row-end: 16;
+}
+.player_nhl_team_14 {
+    place-self: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 16;
+    grid-row-end: 17;
+}
+.player_nhl_team_15 {
+    place-self: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 17;
+    grid-row-end: 18;
+}
+.player_nhl_team_16 {
+    place-self: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 18;
+    grid-row-end: 19;
+}
+
+.position_0 {
+    place-self: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.position_1 {
+    place-self: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+.position_2 {
+    place-self: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 9;
+    grid-row-end: 10;
+}
+.position_3 {
+    place-self: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 12;
+    grid-row-end: 13;
+}
+.position_4 {
+    place-self: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 15;
+    grid-row-end: 16;
+}
+.position_5 {
+    place-self: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 18;
+    grid-row-end: 19;
+}
+
+
+.position_gp_0 {
+    place-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.position_gp_1 {
+    place-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+.position_gp_2 {
+    place-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 9;
+    grid-row-end: 10;
+}
+.position_gp_3 {
+    place-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 12;
+    grid-row-end: 13;
+}
+.position_gp_4 {
+    place-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 15;
+    grid-row-end: 16;
+}
+.position_gp_5 {
+    place-self: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 18;
+    grid-row-end: 19;
+}

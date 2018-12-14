@@ -1,17 +1,122 @@
 <html>
   {% include "Core/head.html" %}
   {% load static %}
-  <link href="{% static 'TeamList/assets/css/Clubhouse.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'Clubhouse/assets/css/Clubhouse.css' %}" rel="stylesheet" type="text/css">
   <body>
+    <div class="team_name">
+      {{ team_name }}
+    </div>
     <div class="frame ClubhouseFrame">
-    {% for player in players %}
-      <a class="player_name_{{ player.1 }}"}'>
-        {{ player.0.name }}
-      </a>
-      <div class="team_gp_{{ team.1 }}">
-        {{ team.0.total_games_played }}
+      <div class="frame_title">
+        Roster
       </div>
-    {% endfor %}
+      {% for player in centers %}
+        <div class="player_name_{{ player.1 }}">
+          {{ player.0.name }}
+        </div>
+        <div class="player_position_{{ player.1 }}">
+          {{ player.0.current_position.name }}
+        </div>
+        <div class="player_nhl_team_{{ player.1 }}">
+          {{ player.0.nhl_team.short_name }}
+        </div>
+      {% endfor %}
+      {% for player in left_wings %}
+        <div class="player_name_{{ player.1 }}">
+          {{ player.0.name }}
+        </div>
+        <div class="player_position_{{ player.1 }}">
+          {{ player.0.current_position.name }}
+        </div>
+        <div class="player_nhl_team_{{ player.1 }}">
+          {{ player.0.nhl_team.short_name }}
+        </div>
+      {% endfor %}
+      {% for player in right_wings %}
+        <div class="player_name_{{ player.1 }}">
+          {{ player.0.name }}
+        </div>
+        <div class="player_position_{{ player.1 }}">
+          {{ player.0.current_position.name }}
+        </div>
+        <div class="player_nhl_team_{{ player.1 }}">
+          {{ player.0.nhl_team.short_name }}
+        </div>
+      {% endfor %}
+      {% for player in defense %}
+        <div class="player_name_{{ player.1 }}">
+          {{ player.0.name }}
+        </div>
+        <div class="player_position_{{ player.1 }}">
+          {{ player.0.current_position.name }}
+        </div>
+        <div class="player_nhl_team_{{ player.1 }}">
+          {{ player.0.nhl_team.short_name }}
+        </div>
+      {% endfor %}
+      {% for player in utilities %}
+        <div class="player_name_{{ player.1 }}">
+          {{ player.0.name }}
+        </div>
+        <div class="player_position_{{ player.1 }}">
+          {{ player.0.current_position.name }}
+        </div>
+        <div class="player_nhl_team_{{ player.1 }}">
+          {{ player.0.nhl_team.short_name }}
+        </div>
+      {% endfor %}
+      {% for player in goalies %}
+        <div class="player_name_{{ player.1 }}">
+          {{ player.0.name }}
+        </div>
+        <div class="player_position_{{ player.1 }}">
+          {{ player.0.current_position.name }}
+        </div>
+        <div class="player_nhl_team_{{ player.1 }}">
+          {{ player.0.nhl_team.short_name }}
+        </div>
+      {% endfor %}
+    </div>
+    <div class="frame GPFrame">
+      <div class="frame_title">
+        Games OVER Limit
+      </div>
+      <div class="position_0">
+        Center
+      </div>
+      <div class="position_1">
+        Left Wing
+      </div>
+      <div class="position_2">
+        Right Wing
+      </div>
+      <div class="position_3">
+        Defense
+      </div>
+      <div class="position_4">
+        Utility
+      </div>
+      <div class="position_5">
+        Goalie
+      </div>
+      <div class="position_gp_0">
+        {{ center_gp }}
+      </div>
+      <div class="position_gp_1">
+        {{ left_wing_gp }}
+      </div>
+      <div class="position_gp_2">
+        {{ right_wing_gp }}
+      </div>
+      <div class="position_gp_3">
+        {{ defense_gp }}
+      </div>
+      <div class="position_gp_4">
+        {{ utility_gp }}
+      </div>
+      <div class="position_gp_5">
+        {{ goalie_gp }}
+      </div>
     </div>
   </body>
 </html>

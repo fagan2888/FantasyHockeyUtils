@@ -21,7 +21,12 @@ CLUBHOUSE_URL = \
 STANDINGS_URL = \
     'https://statsapi.web.nhl.com/api/v1/standings?hydrate=record(overall),division,conference,' \
     'team(nextSchedule(team),previousSchedule(team))&season=20182019'
-
+MAX_GP_CENTER = 246
+MAX_GP_LEFT_WING = 246
+MAX_GP_RIGHT_WING = 246
+MAX_GP_DEFENSE = 410
+MAX_GP_UTILITY = 82
+MAX_GP_GOALIE = 130
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
