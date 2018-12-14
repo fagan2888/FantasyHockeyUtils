@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.conf import settings
 from django.http import HttpResponse
 from Scraper.models import FantasyTeam, NHLTeam, Player, Position
@@ -5,11 +6,17 @@ import requests
 
 
 def scrape_fantasy_teams_if_necessary(request):
-    pass
+    delta = datetime.now() - FantasyTeam.scraper_manager.get_last_scraped()
+
+    if delta.seconds > settings.SECONDS_BETWEEN_FANTASY_SCRAPE:
+        scrape_games_played_for_fantasy_teams(request)
 
 
 def scrape_nhl_teams_if_necessary(request):
-    pass
+    delta = datetime.now() - NHLTeam.scraper_manager.get_last_scraped()
+
+    if delta.seconds > settings.SECONDS_BETWEEN_NHL_SCRAPE:
+        scrape_games_played_for_nhl_teams(request)
 
 
 def scrape_games_played_for_fantasy_teams(request):

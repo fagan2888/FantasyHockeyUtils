@@ -28,6 +28,9 @@ MAX_GP_DEFENSE = 410
 MAX_GP_UTILITY = 82
 MAX_GP_GOALIE = 130
 
+SECONDS_BETWEEN_NHL_SCRAPE = 120
+SECONDS_BETWEEN_FANTASY_SCRAPE = 3600
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
