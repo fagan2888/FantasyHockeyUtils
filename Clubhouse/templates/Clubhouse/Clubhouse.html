@@ -123,8 +123,41 @@
 
 <script>
   $(document).ready(function() {
-    setInterval("refreshTeam()", 3000);
+    setInterval("refreshTeam()", 2000);
   });
+
+  function createEmptyPlayer() {
+      return {
+          name: "",
+          position: "",
+          nhl_team: "",
+          index: -1,
+      }
+  }
+
+  function returnPlayerInPositionByIndex(players, index) {
+      if (players.length <= index) {
+          return createEmptyPlayer();
+      } else {
+          return players[index];
+      }
+  }
+
+  function getPlayerByIndex(response, index) {
+    if (index < 3) {
+        return returnPlayerInPositionByIndex(response["centers"], index);
+    } else if (index < 6) {
+        return returnPlayerInPositionByIndex(response["left_wings"], index - 3);
+    } else if (index < 9) {
+        return returnPlayerInPositionByIndex(response["right_wings"], index - 6);
+    } else if (index < 14) {
+        return returnPlayerInPositionByIndex(response["defense"], index - 9);
+    } else if (index < 15) {
+        return returnPlayerInPositionByIndex(response["utilities"], index - 14);
+    } else {
+        return returnPlayerInPositionByIndex(response["goalies"], index - 15);
+    }
+  }
 
   function refreshTeam() {
     $.ajax({
@@ -132,8 +165,38 @@
      url: "/clubhouse/refresh_team/{{ team_id }}",
      success: function(response) {
          let seenNewData = false;
-         for (let i = 0; i < 3; i++) {
-             
+         for (let i = 0; i < 18; i++) {
+             let currentPlayer = getPlayerByIndex(response, i);
+
+             if ($(".player_name_" + i).length === 0 && currentPlayer['name'].length > 0) {
+                  const clubhouse_frame = $('.ClubhouseFrame');
+
+                  clubhouse_frame.append(
+                     '<div class="player_name_' + i + '"></div>'
+                  );
+                  clubhouse_frame.append(
+                     '<div class="player_position_' + i + '"></div>'
+                  );
+                  clubhouse_frame.append(
+                     '<div class="player_nhl_team_' + i + '"></div>'
+                  );
+             }
+
+             if (currentPlayer['name'] !== $.trim($(".player_name_" + i).text())) {
+                 $(".player_name_" + i).text(currentPlayer['name']).hide().fadeIn('slow');
+                 $(".player_position_" + i).text(currentPlayer['position']).hide().fadeIn('slow');
+                 $(".player_nhl_team_" + i).text(currentPlayer['nhl_team']).hide().fadeIn('slow');
+                 seenNewData = true;
+             }
+         }
+
+         if (seenNewData) {
+             $(".position_gp_0").text(response['center_gp']);
+             $(".position_gp_1").text(response['left_wing_gp']);
+             $(".position_gp_2").text(response['right_wing_gp']);
+             $(".position_gp_3").text(response['defense_gp']);
+             $(".position_gp_4").text(response['utility_gp']);
+             $(".position_gp_5").text(response['goalie_gp']);
          }
      }
    });
