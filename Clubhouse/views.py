@@ -3,7 +3,7 @@ from django.http import HttpResponse, JsonResponse
 from django.template import loader
 from django.views.decorators.http import require_http_methods
 from Scraper.models import FantasyTeam, NHLTeam, Player
-from Scraper.views import scrape_fantasy_teams_if_necessary, scrape_nhl_teams_if_necessary, scrape_players_for_team
+from Scraper.views import scrape_fantasy_teams_if_necessary, scrape_nhl_teams_if_necessary, scrape_fantasy_players_if_necessary
 
 
 class PlayerView:
@@ -73,7 +73,7 @@ def get_team_context(team_id):
 
 @require_http_methods(["GET"])
 def view_team(request, team_id):
-    scrape_players_for_team(request, team_id)
+    scrape_fantasy_players_if_necessary(request, team_id)
     scrape_fantasy_teams_if_necessary(request)
     scrape_nhl_teams_if_necessary(request)
 
@@ -86,7 +86,7 @@ def view_team(request, team_id):
 
 @require_http_methods(["GET"])
 def get_team_refresh(request, team_id):
-    scrape_players_for_team(request, team_id)
+    scrape_fantasy_players_if_necessary(request, team_id)
     scrape_fantasy_teams_if_necessary(request)
     scrape_nhl_teams_if_necessary(request)
 

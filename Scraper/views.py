@@ -5,10 +5,17 @@ from Scraper.models import FantasyTeam, NHLTeam, Player, Position
 import requests
 
 
+def scrape_fantasy_players_if_necessary(request, team_id):
+    delta = datetime.now() - FantasyTeam.objects.get(team_id=team_id).players_last_scraped
+
+    if delta.seconds > settings.SECONDS_BETWEEN_FANTASY_PLAYER_SCRAPE:
+        scrape_players_for_team(request, team_id)
+
+
 def scrape_fantasy_teams_if_necessary(request):
     delta = datetime.now() - FantasyTeam.scraper_manager.get_last_scraped()
 
-    if delta.seconds > settings.SECONDS_BETWEEN_FANTASY_SCRAPE:
+    if delta.seconds > settings.SECONDS_BETWEEN_FANTASY_TEAM_SCRAPE:
         scrape_games_played_for_fantasy_teams(request)
 
 
@@ -98,7 +105,7 @@ def scrape_players_for_team(request, team_id):
         try:
             current_position = Position.objects.get(espn_position_id=scraped_player["espn_position_id"])
             player = Player()
-            player.name = name=scraped_player["name"]
+            player.name = scraped_player["name"]
             player.nhl_team = nhl_team
             player.fantasy_team = fantasy_team
             player.current_position = current_position
@@ -110,6 +117,8 @@ def scrape_players_for_team(request, team_id):
     response_dict = requests.get(target_url).json()
     players = get_players_from_espn_response(response_dict)
     team = FantasyTeam.objects.get(team_id=team_id)
+    team.players_last_scraped = datetime.now()
+    team.save()
     Player.objects.filter(fantasy_team=team).delete()
     for player in players:
         update_player_in_database(player, team)

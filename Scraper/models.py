@@ -21,6 +21,7 @@ class FantasyTeam(models.Model):
     games_played_defense = models.IntegerField(default=0)
     games_played_goalie = models.IntegerField(default=0)
     games_played_utility = models.IntegerField(default=0)
+    players_last_scraped = models.DateTimeField(default=datetime(1992, 4, 20))
 
     objects = models.Manager()
     scraper_manager = FantasyTeamScraperManager()

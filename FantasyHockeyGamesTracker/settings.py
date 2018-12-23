@@ -29,7 +29,8 @@ MAX_GP_UTILITY = 82
 MAX_GP_GOALIE = 130
 
 SECONDS_BETWEEN_NHL_SCRAPE = 120
-SECONDS_BETWEEN_FANTASY_SCRAPE = 3600
+SECONDS_BETWEEN_FANTASY_TEAM_SCRAPE = 120
+SECONDS_BETWEEN_FANTASY_PLAYER_SCRAPE = 2
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -135,7 +136,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 
@@ -144,8 +145,3 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
-
-# Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
